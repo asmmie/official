@@ -93,11 +93,16 @@
     display: inline-block;
 }
 .logo > a > img {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
     transform: translateY(1px);
     height: 22px;
     padding: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    -webkit-filter: invert(17%) sepia(1%) saturate(5579%) hue-rotate(314deg) brightness(89%) contrast(78%);
     filter: invert(17%) sepia(1%) saturate(5579%) hue-rotate(314deg) brightness(89%) contrast(78%);
     z-index: 2;
 }
