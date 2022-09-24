@@ -351,6 +351,30 @@
 .animation {
     animation: typewriter 10s steps(8) infinite both, blinkCursor 500ms steps(15) infinite;
 }
+@-webkit-keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        /* width: 33.333vw; */
+        width: 480px;
+    }
+    0% {
+        width: 0;
+    }
+    25% {
+        /* width: 16.66vw; */
+        width: 240px;
+    }
+    50% {
+        /* width: 33.333vw; */
+        width: 480px;
+    }
+    100% {
+        /* width: 33.333vw; */
+        width: 480px;
+    }
+}
 @keyframes typewriter {
     from {
         width: 0;
@@ -373,6 +397,14 @@
     100% {
         /* width: 33.333vw; */
         width: 480px;
+    }
+}
+@-webkit-keyframes blinkCursor {
+    from {
+        border-right-color: var(--mainthemegray);
+    }
+    to {
+        border-right-color: transparent;
     }
 }
 @keyframes blinkCursor {
@@ -535,7 +567,8 @@
     color: var(--mainthemegray);
     border-width: 1px;
     resize: vertical;
-    box-shadow: 2px 2px 2px var(--txtshadow);
+    -webkit-box-shadow: 2px 2px 2px var(--txtshadow);
+            box-shadow: 2px 2px 2px var(--txtshadow);
 }
 .form__name {
     display: flex;
