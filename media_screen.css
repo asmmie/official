@@ -196,8 +196,9 @@
         font-size: 15px;
     }
     #learnmore-btn {
-        margin: 36px auto 20px auto;
-        width: 100%;
+/*         margin: 36px auto 20px auto;
+        width: 100%; */
+        display: none;
     }
     .img-container {
     height: 360px;
