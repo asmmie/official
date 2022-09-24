@@ -251,26 +251,46 @@
     #greetbox {
         width: 388px;
     }
-    @keyframes typewriter {
+    @-webkit-keyframes typewriter {
     from {
         width: 0;
     }
     to {
-        width: 388px;
+        width: 320px;
     }
     0% {
         width: 0;
     }
     25% {
-        width: 194px;
+        width: 160px;
     }
     50% {
-        width: 388px;
+        width: 320px;
     }
     100% {
-        width: 388px;
+        width: 320px;
     }
-    }   
+    }
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 320px;
+    }
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 160px;
+    }
+    50% {
+        width: 320px;
+    }
+    100% {
+        width: 320px;
+    }
+    }
 }
 @media screen and (max-width: 670px) {
     .aboutwrapper {
