@@ -5,6 +5,7 @@
     font-family: 'IBM Plex Mono', monospace, 'Playfair Display', serif;
     color: var(--mainthemegray);
     scroll-behavior: smooth;
+    scroll-margin-top: 74px;
     /* background-color: #ffffff; */
 }
 :root {
@@ -16,9 +17,9 @@
     --btnshadow: #93948f;
     background-color: #ffffff;
 }
-.scroll-control {
+/* .scroll-control {
     scroll-margin-top: 74px;
-}
+} */
 /* HEADER */
 .navbar {
     background-color: #ffffff;
