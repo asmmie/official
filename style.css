@@ -514,6 +514,8 @@
     font-size: 1.875rem;
     border: none;
     padding: 10px;
+}
+#next-btn i, #prev-btn i {
     color: var(--txtshadow);
 }
 #next-btn:focus, #prev-btn:focus {
