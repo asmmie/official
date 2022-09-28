@@ -575,8 +575,8 @@
     color: var(--mainthemegray);
     border-width: 1px;
     resize: vertical;
-    -webkit-box-shadow: 2px 2px 2px var(--txtshadow);
-            box-shadow: 2px 2px 2px var(--txtshadow);
+    -webkit-box-shadow: 2px 2px 2px var(--txtshadow) !important;
+            box-shadow: 2px 2px 2px var(--txtshadow) !important;
 }
 .form__name {
     display: flex;
