@@ -46,13 +46,13 @@
     text-align: left;
     cursor: pointer;
     width: 150px;
-    height: 60px;
     margin-top: auto;
     margin-bottom: auto;
 }
 .logo {
     position: relative;
     width: 100%;
+    height: 100%;
     text-decoration: none;
     color: var(--mainthemegray);
     font-weight: 900;
@@ -66,44 +66,13 @@
     width: 100%;
     z-index: 1;
 }
-#navbar__logo p {
-    position: absolute;
-    top: 30px;
-    left: 42px;
-    font-style: italic;
-    font-size: 0.75rem;
-    font-weight: 200;
-    color: #bbb9b9;
-    z-index: 0;
-    transform: skewX(-18deg);
-}
-.logo span {
-    color: var(--mainthemegray);
-    font-family: 'Bodoni Moda', serif;
-    margin: 5px 8px;
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-    display: inline-block;
-    z-index: 2;
-}
-#cactus {
-    height: 100%;
-    margin: auto 0;
-    display: inline-block;
-}
 .logo > a > img {
-    -webkit-transform: translateY(1px);
-    -ms-transform: translateY(1px);
-    transform: translateY(1px);
-    height: 22px;
-    padding: auto;
+    width: 100%;
+    padding: 1rem;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    -webkit-filter: invert(17%) sepia(1%) saturate(5579%) hue-rotate(314deg) brightness(89%) contrast(78%);
-    filter: invert(17%) sepia(1%) saturate(5579%) hue-rotate(314deg) brightness(89%) contrast(78%);
     z-index: 2;
 }
 .navbar__item {
