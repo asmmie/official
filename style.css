@@ -572,7 +572,7 @@
     margin: 0 0 18px 0;
     padding: 8px;
     border-radius: 2px;
-    color: var(--mainthemegray);
+    border-color: var(--mainthemegray);
     border-width: 1px;
     resize: vertical;
     -webkit-box-shadow: 2px 2px 2px var(--txtshadow) !important;
