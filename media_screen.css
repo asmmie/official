@@ -69,6 +69,9 @@
     }
 }
 @media screen and (max-width: 670px) {
+    .scroll-control {
+        scroll-margin-top: 64px;
+    }
     .navbar {
         height: 64px;
     }
