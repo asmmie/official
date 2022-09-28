@@ -594,6 +594,9 @@ footer {
     /* background-color: #847a7a; */
     background-color: #b5aeae;
 }
+.footer__container {
+    margin: 18px;
+}
 .footer__menu {
     max-width: 600px;
     margin: 0 auto;
