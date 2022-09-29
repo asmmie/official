@@ -6,6 +6,7 @@
     color: var(--mainthemegray);
     scroll-behavior: smooth;
     scroll-margin-top: 74px;
+    scroll-snap-margin-top: 74px;
     /* background-color: #ffffff; */
 }
 :root {
@@ -22,7 +23,9 @@
 } */
 /* HEADER */
 .navbar {
-    background-color: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(249, 247, 245, 0.9)));
+    background: -o-linear-gradient(rgba(255, 255, 255, 1), rgba(249, 247, 245, 0.9));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(249, 247, 245, 0.9));
     height: 74px;
     display: flex;
     justify-content: center;
