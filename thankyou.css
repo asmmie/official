@@ -25,7 +25,9 @@ body {
 }
 /* HEADER */
 .navbar {
-    background-color: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 1)), to(rgba(249, 247, 245, 0.9)));
+    background: -o-linear-gradient(rgba(255, 255, 255, 1), rgba(249, 247, 245, 0.9));
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(249, 247, 245, 0.9));
     height: 74px;
     display: flex;
     justify-content: center;
@@ -149,10 +151,13 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 160px;
+    height: 180px;
     padding-top: 18px;
     /* background-color: #847a7a; */
-    background-color: #b6afaf;
+    background-color: #b5aeae;
+}
+.footer__container {
+    margin: 18px;
 }
 .footer__menu {
     max-width: 600px;
