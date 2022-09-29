@@ -548,6 +548,7 @@
     border-color: var(--mainthemegray);
     border-width: 1px;
     resize: vertical;
+    -webkit-appearance: none;
     -webkit-box-shadow: 2px 2px 2px var(--txtshadow) !important;
             box-shadow: 2px 2px 2px var(--txtshadow) !important;
 }
