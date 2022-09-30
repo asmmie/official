@@ -72,6 +72,9 @@
     * {
         scroll-margin-top: 64px;
     }
+    .scroll-control {
+        scroll-snap-margin-top: 64px;
+    }
     .navbar {
         height: 64px;
     }
