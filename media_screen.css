@@ -71,6 +71,7 @@
 @media screen and (max-width: 670px) {
     * {
         scroll-margin-top: 64px;
+        -webkit-text-size-adjust: none;
     }
     .scroll-control {
         scroll-snap-margin-top: 64px;
