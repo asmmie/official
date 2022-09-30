@@ -306,7 +306,8 @@
     margin: 80px auto;
     }
     .greet {
-        font-size: 2.063em;
+        font-size: 200%;
+;
     }
     #greetbox {
         width: 320px;
