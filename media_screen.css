@@ -306,7 +306,7 @@
     }
     .greet {
         font-size: 33px;
-        -webkit-text-size-adjust: 95%;
+        -webkit-text-size-adjust: 93%;
 ;
     }
     #greetbox {
