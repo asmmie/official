@@ -6,7 +6,7 @@
     color: var(--mainthemegray);
     scroll-behavior: smooth;
     scroll-margin-top: 74px;
-/*     scroll-snap-margin-top: 74px; */
+    scroll-snap-margin-top: 74px;
     /* background-color: #ffffff; */
 }
 :root {
