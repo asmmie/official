@@ -328,8 +328,8 @@
     height: 65px;
 }
 .animation {
-    -webkit-animation: typewriter 30s steps(8) infinite both, blinkCursor 1500ms steps(15) infinite;
-            animation: typewriter 30s steps(8) infinite both, blinkCursor 1500ms steps(15) infinite;
+    -webkit-animation: typewriter 10s steps(8) infinite both, blinkCursor 500ms steps(15) infinite;
+            animation: typewriter 10s steps(8) infinite both, blinkCursor 500ms steps(15) infinite;
 }
 @-webkit-keyframes typewriter {
     from {
