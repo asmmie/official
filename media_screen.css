@@ -72,7 +72,6 @@
     * {
         scroll-margin-top: 64px;
         scroll-snap-margin-top: 64px;
-        -webkit-text-size-adjust: 100%;
     }
 /*     .scroll-control {
         scroll-snap-margin-top: 64px;
@@ -307,7 +306,7 @@
     }
     .greet {
         font-size: 33px;
-        -webkit-font-size: 30px;
+        -webkit-text-size-adjust: 95%;
 ;
     }
     #greetbox {
