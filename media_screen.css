@@ -234,11 +234,11 @@
     } */
     
 }
-/* @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
     .mainwrapper {
     height: 760px;
     }
-} */
+}
 
 /* ABOUT */
 @media screen and (min-width: 1441px) {
