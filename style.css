@@ -9,6 +9,9 @@
     scroll-snap-margin-top: 74px;
     /* background-color: #ffffff; */
 }
+html, body {
+    overflow-x: hidden;
+}
 :root {
     /* --mainthemegray: #282020; */
     --mainthemegray: #403838;
@@ -32,14 +35,17 @@
     justify-content: center;
     align-items: center;
     /* font-size: 1.2rem; */
-    position: sticky;
+    position: fixed;
+    /* position: sticky; */
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 10;
 }
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 100%;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
@@ -146,12 +152,12 @@
 /* MAIN */
 .container {
     max-width: 100vw;
+    height: 100vh;
 }
 .mainwrapper {
-    overflow: hidden;
     display: flex;
     margin: 0;
-    height: 700px;
+    height: 100%;
 }
 .head-content {
     font-family: 'Bodoni Moda', serif;
@@ -205,10 +211,12 @@
 } */
 
 .contents {
-    margin-top: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
     /* margin-left: 60px; */
     margin-left: 4.1666vw;
     width: 420px;
+    height: fit-content;
     /* width: 33vw; */
     /* min-width: 200px; */
     z-index: 2;
@@ -251,6 +259,7 @@
     box-shadow: none;
 }
 .img-container {
+    margin-top: 74px;
     position: relative;
     width: 100%;
 }
@@ -490,7 +499,8 @@
     padding: 10px;
 }
 #next-btn i, #prev-btn i {
-    color: var(--txtshadow);
+    color: #474445;
+    opacity: 35%;
 }
 #next-btn:focus, #prev-btn:focus {
     outline: none;
