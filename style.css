@@ -270,9 +270,11 @@ html, body {
     left: 90px;
     right: -50px;
 }
+
 .imgs {
     width: 90%;
 }
+
 .img-stack {
     position: absolute;
     top: 60px;
