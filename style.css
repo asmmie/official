@@ -416,7 +416,16 @@ html, body {
     font-size: 1rem;
     line-height: 1.625rem;
 }
-
+.dscriptn-animation {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 3s ease;
+}
+.dscrptn-active {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.5s;
+}
 
 
 /* SERVICE */
