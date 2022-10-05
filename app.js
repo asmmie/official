@@ -153,13 +153,13 @@ window.addEventListener("click", highlightMenu);
 
 // ABOUT ANIMATION
 window.addEventListener('scroll', () => {
-  let greet = document.querySelector(".greet");
+  let greet = document.querySelector('.greet');
   let greetPosition = greet.getBoundingClientRect().top;
   let screenPosition = window.innerHeight;
   if (greetPosition < screenPosition) {
     greet.classList.add('animation');
   } else {
-    greet.classList.remove("animation");
+    greet.classList.remove('animation');
   }
 });
 
