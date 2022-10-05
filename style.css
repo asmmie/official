@@ -270,10 +270,8 @@ html, body {
     left: 90px;
     right: -50px;
 }
-.main-img img {
+.imgs {
     width: 90%;
-    /* box-shadow: 4px 4px 4px var(--txtshadow); */
-    /* z-index: 2; */
 }
 .img-stack {
     position: absolute;
@@ -283,10 +281,7 @@ html, body {
     min-width: 750px;
     transform: rotate(-3deg);
 }
-.img-stack img {
-    width: 90%;
-    /* box-shadow: 4px 4px 4px var(--txtshadow); */
-}
+
 .img-trans {
     transition: transform 3s ease-out;
     transform:translateX(-30px);
