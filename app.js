@@ -151,6 +151,23 @@ const highlightMenu = () => {
 window.addEventListener("scroll", highlightMenu);
 window.addEventListener("click", highlightMenu);
 
+
+// MAIN ANIMATION
+
+const heroImgs = document.querySelectorAll('.imgs');
+[...heroImgs].forEach((heroImg) => {
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+  if (scrollPos > 800) {
+    heroImg.classList.remove('img-trans');
+  } else {
+    heroImg.classList.add('img-trans');
+  }
+  })
+});
+
+
+
 // ABOUT ANIMATION
 window.addEventListener('scroll', () => {
   let greet = document.querySelector('.greet');
