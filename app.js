@@ -153,6 +153,17 @@ window.addEventListener("click", highlightMenu);
 
 // ABOUT ANIMATION
 window.addEventListener('scroll', () => {
+  let greet = document.querySelector(".greet");
+  let greetPosition = greet.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+  if (greetPosition < screenPosition) {
+    greet.classList.add('animation');
+  } else {
+    greet.classList.remove("animation");
+  }
+});
+
+window.addEventListener('scroll', () => {
   let content = document.querySelector('.dscriptn-animation');
   let contentPosition = content.getBoundingClientRect().top;
   let screenPosition = window.innerHeight;
