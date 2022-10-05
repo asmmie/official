@@ -150,3 +150,15 @@ const highlightMenu = () => {
 }
 window.addEventListener("scroll", highlightMenu);
 window.addEventListener("click", highlightMenu);
+
+// ABOUT ANIMATION
+window.addEventListener('scroll', () => {
+  let content = document.querySelector('.dscriptn-animation');
+  let contentPosition = content.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+  if (contentPosition < screenPosition) {
+    content.classList.add('dscrptn-active');
+  } else {
+    content.classList.remove('dscrptn-active');
+  }
+});
