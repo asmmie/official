@@ -234,18 +234,18 @@
     min-width: 0;
     width: 100%;
     top: 0;
-    left: 0px;
-    right: -50px;
+    left: 30px;
+    right: 0;
     /* display: block; */
     }
     
-    .img-stack img, .main-img img {
+    .imgs {
     width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    transform: none;
+/*     transform: none; */
     }
     
 }
