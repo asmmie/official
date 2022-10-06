@@ -158,7 +158,7 @@ const heroImgs = document.querySelectorAll('.imgs');
 [...heroImgs].forEach((heroImg) => {
   window.addEventListener('scroll', () => {
     let scrollPos = window.scrollY;
-  if (scrollPos > 800) {
+  if (scrollPos > 1000) {
     heroImg.classList.remove('img-trans');
   } else {
     heroImg.classList.add('img-trans');
