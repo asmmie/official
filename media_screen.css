@@ -93,38 +93,23 @@
 @media screen and (min-width: 1441px) {
     .contents {
     width: 29vw;
-    margin-top: 15vh;
     }
     .head-content {
-    /* font-size: 4.3vw; */
     font-size: calc(31px + 2.15vw);
-    /* font-size: calc(18.6px + 6.262vh); */
     width: 40vw;
     }
     .contents p {
-    /* font-size: 1.27vw; */
-    /* font-size: calc(5.4px + 1.818vh); */
     font-size: calc(9px + 0.624vw);
     width: 38vw;
     }
     #la {
-    /* font-size: 1.38vw; */
-    /* font-size: calc(6px + 2.02vh); */
     font-size: calc(10px + 0.6935vw);
     text-shadow: .337vw .337vh .16vw #7e7c7c;
     }
     #learnmore-btn {
-    /* font-size: 1.1vw;
-    width: 9.8vw;
-    padding: 1.5vh 1.5vw; */
-    /* font-size: calc(4.8px + 1.616vh); */
     font-size: 1.1vw;
-    /* width: calc(42px + 6.8vw); */
     width: 9.8vw;
     padding: calc(3.6px + 1.212vh) calc(3.6px + 0.583vw);
-    /* padding: 12px 12px;
-    width: 140px;
-    margin-top: 36px; */
     }
 }
 @media screen and (max-width: 960px) {
@@ -262,14 +247,13 @@
     }
     .dscrptn {
         font-size: calc(16px + 0.5vh);
-        /* line-height: 1.625rem; */
         line-height: calc(26px + 0.5vh);
     }
     .profpic {
     height: 28.86vh;
     min-height: 200px;
     margin: 6.06vh auto;
-}
+    }
 }
 @media screen and (max-width: 1280px) {
     .aboutwrapper {
