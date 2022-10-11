@@ -151,6 +151,7 @@ html, body {
 .container {
     max-width: 100vw;
     height: 100vh;
+    min-height: 700px;
 }
 .mainwrapper {
     display: flex;
