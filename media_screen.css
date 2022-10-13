@@ -460,7 +460,10 @@
 
 @media screen and (max-width: 960px) {
     .project-eh, .project-quote {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin: 32px auto;
     }
     .eh-dscrptn, .quote-dscrptn {
