@@ -190,3 +190,68 @@ window.addEventListener('scroll', () => {
     content.classList.remove('dscrptn-active');
   }
 });
+
+
+
+// PROJECT POPUP WINDOWS
+
+const pjImgs = document.querySelectorAll(".inner-frame");
+const popupImgDiv = document.querySelector(".popup-img");
+const popupImg = document.querySelector(".popup-img img");
+
+
+
+[...pjImgs].forEach((img) => {
+  let hiddenImgOne = img.children[0];
+  let hiddenImgTwo = img.children[1];
+  img.onclick = () => {
+    popupImgDiv.style.display = "block";
+    popupImg.src = hiddenImgOne.getAttribute("src");
+
+    let toggle = true;
+    popupImg.onclick = () => {
+      toggle = !toggle;
+      if (toggle) {
+        popupImg.src = hiddenImgOne.getAttribute("src");
+      } else {
+        popupImg.src = hiddenImgTwo.getAttribute("src");
+      }
+    };
+  };
+});
+
+const closeBtn = document.querySelector(".popup-img span");
+closeBtn.onclick = () => {
+  popupImgDiv.style.display = "none";
+};
+
+
+
+
+// PROJECT ANIMATION
+
+const pjAnime = document.querySelectorAll(".prj-animation");
+const pjAnimeDly = document.querySelectorAll(".prj-animation-delay");
+[...pjAnime].forEach((anime) => {
+  window.addEventListener("scroll", () => {
+    let contentPosition = anime.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+    if (contentPosition < screenPosition) {
+      anime.classList.add("pj-anime-active");
+    } else {
+      anime.classList.remove("pj-anime-active");
+    }
+  })
+});
+
+[...pjAnimeDly].forEach((animed) => {
+  window.addEventListener("scroll", () => {
+    let contentPosition = animed.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
+    if (contentPosition < screenPosition) {
+      animed.classList.add("pj-anime-active-delay");
+    } else {
+      animed.classList.remove("pj-anime-active-delay");
+    }
+  });
+});
