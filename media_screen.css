@@ -512,6 +512,9 @@
     .prj-contents {
     height: 100px;
     }
+    .pj-dscrptn a:hover {
+    transform: none;
+}
 }
 
 /* CONTACT */
