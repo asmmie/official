@@ -480,6 +480,9 @@
         width: 95%;
         max-width: 770px;
     }
+    .prj-contents {
+    height: 150px;
+    }
 }
 @media screen and (max-width: 670px) {
     .projects__container {
@@ -490,7 +493,24 @@
         width: 70%;
     }
     .inner-frame {
-        width: 90%;
+        width: 90vw;
+        height: calc(90vw * 0.6)
+    }
+    .pj-btn {
+        display: flex;
+        justify-content: center;
+    }
+    .pj-dscrptn a {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #f5f6f1;
+        background-color: #b5aeae;
+        border-radius: 4px;
+        margin: 12px auto;
+        align-items: center;
+    }
+    .prj-contents {
+    height: 100px;
     }
 }
 
