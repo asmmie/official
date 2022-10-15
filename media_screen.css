@@ -513,6 +513,7 @@
     height: 100px;
     }
     .pj-dscrptn a:hover {
+    text-shadow: none;
     transform: none;
 }
 }
