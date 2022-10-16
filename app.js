@@ -1,3 +1,13 @@
+// LANDING ANIMATION
+
+const landingBody = document.querySelector(".landing-animation");
+window.addEventListener("load", () => {
+  landingBody.classList.add("landing-active");
+});
+
+
+// MOBILE MENU
+
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 const navLogo = document.querySelector("#navbar__logo");
@@ -163,7 +173,12 @@ const heroImgs = document.querySelectorAll('.imgs');
   } else {
     heroImg.classList.add('img-trans');
   }
-  })
+  });
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      heroImg.classList.add("img-trans");
+    }, 1500);
+  });
 });
 
 
