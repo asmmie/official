@@ -177,7 +177,7 @@ const heroImgs = document.querySelectorAll('.imgs');
   window.addEventListener("load", () => {
     setTimeout(() => {
       heroImg.classList.add("img-trans");
-    }, 1500);
+    }, 1200);
   });
 });
 
