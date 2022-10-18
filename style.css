@@ -581,21 +581,21 @@ html, body {
     display: none;
 }
 .eh-inner-frame {
-    background-image: url('./images/eh_mockup_laotop_no_bg.png');
+    background-image: url('./images/eh-1.png');
     transition: all 0.1s ease-out;
 }
 
 .eh-inner-frame:hover {
-    background-image: url('./images/eh_mockup_iphone_nobg.png');
+    background-image: url('./images/eh-2.png');
 }
 
 .quote-inner-frame {
-    background-image: url('./images/quote_mockup_laotop_no_bg.png');
+    background-image: url('./images/quote-1.png');
     transition: all 0.1s ease-out;
 }
 
 .quote-inner-frame:hover {
-    background-image: url('./images/quote_mockup_iphone_nobg.png');
+    background-image: url('./images/quote-2.png');
 }
 
 .pj-dscrptn {
