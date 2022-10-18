@@ -210,29 +210,28 @@ window.addEventListener('scroll', () => {
 
 // PROJECT POPUP WINDOWS
 
-const pjImgs = document.querySelectorAll(".inner-frame");
 const popupImgDiv = document.querySelector(".popup-img");
 const popupImg = document.querySelector(".popup-img img");
 
+const getUrl = (first, second) => {
+  popupImgDiv.style.display = "block";
+  popupImg.src = `./images/${first}.png`;
 
-
-[...pjImgs].forEach((img) => {
-  let hiddenImgOne = img.children[0];
-  let hiddenImgTwo = img.children[1];
-  img.onclick = () => {
-    popupImgDiv.style.display = "block";
-    popupImg.src = hiddenImgOne.getAttribute("src");
-
-    let toggle = true;
-    popupImg.onclick = () => {
-      toggle = !toggle;
-      if (toggle) {
-        popupImg.src = hiddenImgOne.getAttribute("src");
-      } else {
-        popupImg.src = hiddenImgTwo.getAttribute("src");
-      }
-    };
+  let toggle = true;
+  popupImg.onclick = () => {
+    toggle = !toggle;
+    if (toggle) {
+      popupImg.src = `./images/${first}.png`;
+    } else {
+      popupImg.src = `./images/${second}.png`;
+    }
   };
+};
+
+popupImgDiv.addEventListener("click", (evt) => {
+  if (!evt.target.closest(".popup-img img")) {
+    popupImgDiv.style.display = "none";
+  }
 });
 
 const closeBtn = document.querySelector(".popup-img span");
