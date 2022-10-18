@@ -10,28 +10,19 @@ window.addEventListener("load", () => {
 
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
-const navLogo = document.querySelector("#navbar__logo");
 
-menu.addEventListener("click", () => {
-  menu.classList.toggle("is-active");
-  menuLinks.classList.toggle("active");
+
+
+document.addEventListener("click", (evt) =>{
+  const menuBars = document.querySelector(".is-active");
+  if (menu.contains(evt.target)) {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.toggle("active");
+  } else if (menuBars) {
+    menu.classList.toggle("is-active");
+    menuLinks.classList.toggle("active");
+  }
 });
-
-// [...navLink].forEach((item) => {
-//   item.addEventListener("click", () => {
-//     menu.classList.toggle("is-active");
-//     menuLinks.classList.remove("active");
-//   });
-// });
-const hideMobileMenu = () => {
-  const menuBars = document.querySelector('.is-active');
-    if (window.innerWidth <= 960 && menuBars) {
-      menu.classList.toggle("is-active");
-      menuLinks.classList.remove("active");
-    }
-  };
-menuLinks.addEventListener("click", hideMobileMenu);
-navLogo.addEventListener("click", hideMobileMenu);
 
 
 // SLIDE
