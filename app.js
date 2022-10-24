@@ -115,8 +115,8 @@ const navLinks = document.querySelectorAll(".navbar__links");
 
 window.addEventListener("scroll", () => {
   let current = "";
+  let scrollPos = window.pageYOffset;
   ssTargets.forEach((sst) => {
-    let scrollPos = window.scrollY;
     let targetPosition = sst.offsetTop;
     let sectionHeight = sst.clientHeight;
     if (scrollPos >= (targetPosition - sectionHeight / 3)) {
@@ -142,7 +142,7 @@ window.addEventListener("scroll", () => {
 const heroImgs = document.querySelectorAll('.imgs');
 [...heroImgs].forEach((heroImg) => {
   window.addEventListener('scroll', () => {
-    let scrollPos = window.scrollY;
+    let scrollPos = window.pageYOffset;
   if (scrollPos > 1000) {
     heroImg.classList.remove('img-trans');
   } else {
