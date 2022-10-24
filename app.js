@@ -110,7 +110,6 @@ window.addEventListener("resize", resetSlide);
 // SMOOTH SCROLL
 
 const ssTargets = document.querySelectorAll(".ss-targets");
-let scrollPos = window.scrollY;
 const navLinks = document.querySelectorAll(".navbar__links");
 
 window.addEventListener("scroll", () => {
