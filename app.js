@@ -131,13 +131,13 @@ const highlightMenu = () => {
       contactMenu.classList.remove("current-menu");
       projectsMenu.classList.remove("current-menu");
       return;
-    } else if (window.innerWidth > 960 && scrollPos < 2430) {
+    } else if (window.innerWidth > 960 && scrollPos < 2810) {
       projectsMenu.classList.add("current-menu");
       aboutMenu.classList.remove("current-menu");
       homeMenu.classList.remove("current-menu");
       contactMenu.classList.remove("current-menu");
       return;
-    } else if (window.innerWidth > 960 && scrollPos >= 2431) {
+    } else if (window.innerWidth > 960 && scrollPos >= 2811) {
       contactMenu.classList.add("current-menu");
       aboutMenu.classList.remove("current-menu");
       homeMenu.classList.remove("current-menu");
