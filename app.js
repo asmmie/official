@@ -112,28 +112,30 @@ window.addEventListener("resize", resetSlide);
 const ssTargets = document.querySelectorAll(".ss-targets");
 const navLinks = document.querySelectorAll(".navbar__links");
 
-window.addEventListener("scroll", () => {
-  let current = "";
+
+const highlightMenu = () => {
+  let current;
   let scrollPos = window.pageYOffset;
   ssTargets.forEach((sst) => {
     let targetPosition = sst.offsetTop;
     let sectionHeight = sst.clientHeight;
-    if (scrollPos >= (targetPosition - sectionHeight / 3)) {
-      current = sst.getAttribute("name");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    if (window.innerWidth > 960) {
-      link.classList.remove("current-menu");
-      if (link.classList.contains(current)) {
-        link.classList.add("current-menu");
+    if (window.innerWidth >= 960) {
+      if (scrollPos >= targetPosition - sectionHeight / 3) {
+        current = sst.getAttribute("name");
       }
-    } else {
-      return;
     }
   });
-});
+  navLinks.forEach((link) => {
+    link.classList.remove("current-menu");
+    if (link.classList.contains(current)) {
+      link.classList.add("current-menu");
+    } else {
+      link.classList.remove("current-menu");
+    }
+  });
+};
+window.addEventListener("scroll", highlightMenu);
+window.addEventListener("resize", highlightMenu);
 
 
 // MAIN ANIMATION
