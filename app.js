@@ -109,48 +109,32 @@ window.addEventListener("resize", resetSlide);
 
 // SMOOTH SCROLL
 
-const highlightMenu = () => {
-    const elem = document.querySelector(".current-menu");
-    const homeMenu = document.querySelector("#home-menu");
-    const aboutMenu = document.querySelector("#about-menu");
-    const projectsMenu = document.querySelector("#projects-menu")
-    const contactMenu = document.querySelector("#contact-menu");
+const ssTargets = document.querySelectorAll(".ss-targets");
+let scrollPos = window.scrollY;
+const navLinks = document.querySelectorAll(".navbar__links");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  ssTargets.forEach((sst) => {
     let scrollPos = window.scrollY;
-    // console.log(scrollPos);
-    if (
-      window.innerWidth > 960 &&
-      scrollPos < 600) {
-      homeMenu.classList.add("current-menu");
-      aboutMenu.classList.remove("current-menu");
-      contactMenu.classList.remove("current-menu");
-      projectsMenu.classList.remove("current-menu");
-      return;
-    } else if (window.innerWidth > 960 && scrollPos < 1670) {
-      aboutMenu.classList.add("current-menu");
-      homeMenu.classList.remove("current-menu");
-      contactMenu.classList.remove("current-menu");
-      projectsMenu.classList.remove("current-menu");
-      return;
-    } else if (window.innerWidth > 960 && scrollPos < 2810) {
-      projectsMenu.classList.add("current-menu");
-      aboutMenu.classList.remove("current-menu");
-      homeMenu.classList.remove("current-menu");
-      contactMenu.classList.remove("current-menu");
-      return;
-    } else if (window.innerWidth > 960 && scrollPos >= 2811) {
-      contactMenu.classList.add("current-menu");
-      aboutMenu.classList.remove("current-menu");
-      homeMenu.classList.remove("current-menu");
-      projectsMenu.classList.remove("current-menu");
+    let targetPosition = sst.offsetTop;
+    let sectionHeight = sst.clientHeight;
+    if (scrollPos >= (targetPosition - sectionHeight / 3)) {
+      current = sst.getAttribute("name");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    if (window.innerWidth > 960) {
+      link.classList.remove("current-menu");
+      if (link.classList.contains(current)) {
+        link.classList.add("current-menu");
+      }
+    } else {
       return;
     }
-    if (
-      (elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
-      elem.classList.remove("current-menu");
-    }
-}
-window.addEventListener("scroll", highlightMenu);
-window.addEventListener("click", highlightMenu);
+  });
+});
 
 
 // MAIN ANIMATION
