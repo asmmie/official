@@ -709,7 +709,7 @@ html, body {
     left: -30px;
 }
 .comingsoon::before {
-    text-shadow: -0.2rem 0;
+    text-shadow: -0.1rem 0;
     animation: glitch-1 3s linear infinite reverse;
 }
 .comingsoon::after {
