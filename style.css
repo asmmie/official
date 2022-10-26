@@ -706,16 +706,14 @@ html, body {
     height: 100%;
     overflow: hidden;
     top: 0;
-    /* left: 0; */
     left: -30px;
-    /* right: 0; */
 }
 .comingsoon::before {
-    text-shadow: -2px 0;
+    text-shadow: -0.2rem 0;
     animation: glitch-1 3s linear infinite reverse;
 }
 .comingsoon::after {
-    text-shadow: 2px 0;
+    text-shadow: .05rem 0;
     animation: glitch-2 2s linear infinite reverse;
 }
 .comingsoon {
