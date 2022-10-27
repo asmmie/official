@@ -245,3 +245,29 @@ const pjAnimeDly = document.querySelectorAll(".prj-animation-delay");
     }
   });
 });
+
+
+// GLITCH
+
+const glitchTgtOne = document.querySelector(".comingsoon span:nth-child(1)");
+const glitchTgtTwo = document.querySelector(".comingsoon span:nth-child(2)");
+
+window.addEventListener("scroll", () => {
+  let glitchPosition = glitchTgtOne.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+  if (glitchPosition < screenPosition) {
+    glitchTgtOne.classList.add("glitch1");
+  } else if (glitchPosition < screenPosition + 500) {
+    glitchTgtOne.classList.remove("glitch1");
+  }
+});
+
+window.addEventListener("scroll", () => {
+  let glitchPosition = glitchTgtTwo.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+  if (glitchPosition < screenPosition) {
+    glitchTgtTwo.classList.add("glitch2");
+  } else if (glitchPosition < screenPosition + 500) {
+    glitchTgtTwo.classList.remove("glitch2");
+  }
+});
