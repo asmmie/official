@@ -878,8 +878,11 @@ html, body {
     height: 180px;
     padding: 8px;
 }
-.contact__wrapper h2, p {
+.contact__wrapper h1, p {
     margin-bottom: 18px;
+}
+.contact__wrapper h1 {
+    font-size: 1.875rem;
 }
 .contact__wrapper p {
     font-weight: 100;
