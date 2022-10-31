@@ -332,6 +332,10 @@ width: 25%;
 }
 
 @media screen and (max-width: 670px) {
+    body {
+    min-height: 0;
+    height: 100vh;
+    }
     .ty-heading {
         font-size: 20px;
     }
