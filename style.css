@@ -459,7 +459,7 @@ html, body {
 .flex-container {
     display: flex;
     flex-direction: column;
-    width: 2000px;
+    width: 2600px;
     height: 100%;
 }
 .service-container {
@@ -469,7 +469,7 @@ html, body {
     align-items: center;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(13, 1fr);
 }
 .card {
     height: 100%;
@@ -546,7 +546,7 @@ html, body {
     justify-content: center;
     
 }
-.project-eh, .project-quote {
+.project-eh, .project-quote, .project-amazon {
     /* background-color: #f0eaea; */
     display: flex;
     justify-content: center;
@@ -591,11 +591,37 @@ html, body {
     background-image: url('./images/quote-2.png');
 }
 
+.amazon-inner-frame {
+    background-image: url('./images/mockup_desktop_blank.png');
+    transition: all 0.1s ease-out;
+    position: relative;
+    z-index: 1;
+}
+
+.amazon-inner-frame:hover {
+    background-image: url('./images/amazon_2.png');
+    transition: all 0.1s ease-out;
+}
+
+.amazon-video-div {
+    position: absolute;
+    top: 11.7%;
+    left: 16%;
+    right: 16%;
+    bottom: 13.6%;
+}
+
+.amazon-video, .video-div video {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
 .pj-dscrptn {
     width: 50%;
     /* margin: 0 auto; */
 }
-.eh-dscrptn {
+.eh-dscrptn, .amazon-dscrptn {
     padding-right: 24px;
 }
 .quote-dscrptn {
@@ -630,28 +656,30 @@ html, body {
 }
 
 
-.popup-img {
-    position: fixed;
-    top: 0;
-    left:0;
-    background: rgba(0,0,0,0.8);
-    z-index: 99;
-    width: 100%;
-    display: none;
-    height: 100vh;
-    min-height: 700px;
-}
-.popup-img img {
+.popup-img-wrapper {
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
+    padding: 0;
     background-color: #ffffff;
     margin: auto;
     max-width: 1133px;
     width: 80%;
-    cursor: pointer;
+    height: fit-content;
+    height: -webkit-fit-content;
+    aspect-ratio: 5/3;
+    /* height: calc(100vw * 0.8 / 5 * 3); */
+}
+.popup-img-wrapper img {
+    display: block;
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
     /* height: 680px; */
 }
 .popup-img span {
@@ -672,7 +700,14 @@ html, body {
     color: rgba(198, 196, 196, 0.7);
 }
 
-
+.video-div {
+    display: none;
+    position: absolute;
+    top: 11.7%;
+    left: 16%;
+    right: 16%;
+    bottom: 13.6%;
+}
 
 .prj-animation {
     opacity: 0;
@@ -717,6 +752,10 @@ html, body {
     padding: 30px;
     top: 0;
     left: 0;
+}
+
+.comingsoon span {
+    white-space: nowrap;
 }
 
 .glitch1 {
