@@ -33,7 +33,7 @@ const prevBtn = document.getElementById("prev-btn");
 const interval = 3000;
 
 let slides = document.querySelectorAll('.card');
-let index = 1;
+let index = 0;
 let slideId;
 
 const firstClone = slides[0].cloneNode(true);
@@ -186,15 +186,30 @@ window.addEventListener('scroll', () => {
 
 // PROJECT POPUP WINDOWS
 
+const amazonVideoDiv = document.querySelector(".amazon-video-div");
+const amazonDiv= document.querySelector(".amazon-inner-frame");
+const amazonVideo = document.querySelector(".amazon-video");
 const popupImgDiv = document.querySelector(".popup-img");
-const popupImg = document.querySelector(".popup-img img");
+const popupImg = document.querySelector(".popup-img-wrapper img");
+const popupImgW = document.querySelector(".popup-img-wrapper");
+const popupVideoDiv = document.querySelector(".video-div");
+const popupVideo = document.querySelector(".video-div video");
+
+
+amazonDiv.onmouseover = () => {
+  amazonVideoDiv.style.display = "none";
+}
+amazonDiv.onmouseout = () => {
+  amazonVideoDiv.style.display = "block";
+};
+
 
 const getUrl = (first, second) => {
   popupImgDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
 
   let toggle = true;
-  popupImg.onclick = () => {
+  popupImgW.onclick = () => {
     toggle = !toggle;
     if (toggle) {
       popupImg.src = `./images/${first}.png`;
@@ -204,16 +219,45 @@ const getUrl = (first, second) => {
   };
 };
 
+
+const showVideo = (video, first, second) => {
+  popupImgDiv.style.display = "block";
+  popupVideoDiv.style.display = "block";
+  popupImg.src = `./images/${first}.png`;
+  popupVideo.src = `./images/${video}.mov`;
+
+  let toggle = true;
+  popupImgW.onclick = () => {
+    toggle = !toggle;
+    if (toggle) {
+      popupVideoDiv.style.display = "block";
+      popupImg.src = `./images/${first}.png`;
+      popupVideo.src = `./images/${video}.mov`;
+    } else {
+      popupVideoDiv.style.display = "none";
+      popupImg.src = `./images/${second}.png`;
+    }
+  };
+}
+
+
 popupImgDiv.addEventListener("click", (evt) => {
-  if (!evt.target.closest(".popup-img img")) {
+  if (!evt.target.closest(".popup-img-wrapper")) {
     popupImgDiv.style.display = "none";
+    popupVideoDiv.style.display = "none";
   }
 });
 
-const closeBtn = document.querySelector(".popup-img span");
-closeBtn.onclick = () => {
-  popupImgDiv.style.display = "none";
-};
+window.addEventListener("scroll", () => {
+  let content = document.querySelector(".amazon-video-div");
+  let contentPosition = content.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
+  if (contentPosition < screenPosition) {
+    amazonVideo.play();
+  } else {
+    amazonVideo.pause();
+  }
+});
 
 
 
