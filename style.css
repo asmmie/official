@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     font-family: 'IBM Plex Mono', monospace, 'Playfair Display', serif;
     color: var(--mainthemegray);
     scroll-behavior: smooth;
@@ -670,7 +671,6 @@ html, body {
 
 
 .popup-img-wrapper {
-    box-sizing: border-box;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -681,6 +681,7 @@ html, body {
     margin: auto;
     max-width: 1133px;
     width: 80%;
+    height: -moz-fit-content;
     height: fit-content;
     height: -webkit-fit-content;
     aspect-ratio: 5/3;
@@ -690,6 +691,7 @@ html, body {
     display: block;
     position: relative;
     width: 100%;
+    -o-object-fit: contain;
     object-fit: contain;
     margin: 0;
     padding: 0;
@@ -746,10 +748,14 @@ html, body {
 
 .comingsoon {
     text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: auto;
     position: relative;
     padding: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 245px;
 }
