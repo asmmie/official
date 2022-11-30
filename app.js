@@ -195,11 +195,18 @@ const popupImgW = document.querySelector(".popup-img-wrapper");
 const popupVideoDiv = document.querySelector(".video-div");
 const popupVideo = document.querySelector(".video-div video");
 
-
-amazonDiv.onmouseover = () => {
-  amazonVideoDiv.style.display = "none";
-}
-amazonDiv.onmouseout = () => {
+let hoverTimer;
+amazonDiv.onmouseenter = () => {
+  hoverTimer = setTimeout(() => {
+    amazonDiv.style.backgroundImage = "url('./images/amazon_2.png')";
+    amazonDiv.style.transition = "all 0.1s ease-out";
+    amazonVideoDiv.style.display = "none";
+  }, 1000);
+  
+};
+amazonDiv.onmouseleave = () => {
+  clearTimeout(hoverTimer);
+  amazonDiv.style.backgroundImage = "url('./images/mockup_desktop_blank.png')";
   amazonVideoDiv.style.display = "block";
 };
 
