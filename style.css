@@ -576,20 +576,22 @@ html, body {
 }
 .eh-inner-frame {
     background-image: url('./images/eh-1.png');
-    transition: all 0.1s ease-out;
 }
 
 .eh-inner-frame:hover {
     background-image: url('./images/eh-2.png');
+    transition: all 0.1s ease-out;
+    transition-delay: 1s;
 }
 
 .quote-inner-frame {
     background-image: url('./images/quote-1.png');
-    transition: all 0.1s ease-out;
 }
 
 .quote-inner-frame:hover {
     background-image: url('./images/quote-2.png');
+    transition: all 0.1s ease-out;
+    transition-delay: 1s;
 }
 
 .amazon-inner-frame {
@@ -597,11 +599,6 @@ html, body {
     transition: all 0.1s ease-out;
     position: relative;
     z-index: 1;
-}
-
-.amazon-inner-frame:hover {
-    background-image: url('./images/amazon_2.png');
-    transition: all 0.1s ease-out;
 }
 
 .amazon-video-div {
