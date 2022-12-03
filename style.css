@@ -547,14 +547,14 @@ html, body {
     justify-content: center;
     
 }
-.project-eh, .project-quote, .project-amazon {
+.project-eh, .project-quote, .project-amazon, .project-tja {
     /* background-color: #f0eaea; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 24px auto;
 }
-.project-quote {
+.project-quote, .project-tja {
     flex-direction: row-reverse;
 }
 
@@ -615,6 +615,16 @@ html, body {
     z-index: 2;
 }
 
+.tja-inner-frame {
+    background-image: url('./images/tja-1.png');
+    
+}
+.tja-inner-frame:hover {
+    background-image: url('./images/tja-2.png');
+    transition: all 0.1s ease-out;
+    transition-delay: 1s;
+}
+
 .pj-dscrptn {
     width: 50%;
     /* margin: 0 auto; */
@@ -622,7 +632,7 @@ html, body {
 .eh-dscrptn, .amazon-dscrptn {
     padding-right: 24px;
 }
-.quote-dscrptn {
+.quote-dscrptn, .tja-dscrptn {
     padding-left: 24px;
 }
 
