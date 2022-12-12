@@ -8,7 +8,6 @@
     scroll-behavior: smooth;
     scroll-margin-top: 74px;
     scroll-snap-margin-top: 74px;
-    /* background-color: #ffffff; */
 }
 html, body {
     overflow-x: hidden;
@@ -22,10 +21,8 @@ html, body {
     transition-delay: 0.7s;
 }
 :root {
-    /* --mainthemegray: #282020; */
     --mainthemegray: #403838;
     --txtshadow: #d2cdd0;
-    /* --accentgreen: #c2d7ae; */
     --accentgreen: #bbd0a9;
     --btnshadow: #93948f;
     background-color: #ffffff;
@@ -43,9 +40,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* font-size: 1.2rem; */
     position: fixed;
-    /* position: sticky; */
     top: 0;
     left: 0;
     right: 0;
@@ -63,7 +58,6 @@ html, body {
 #navbar__logo {
     display: flex;
     align-items: center;
-    text-align: left;
     cursor: pointer;
     width: 150px;
     margin-top: auto;
@@ -73,12 +67,7 @@ html, body {
 .logo {
     width: 70%;
     height: 70%;
-    text-decoration: none;
-    color: var(--mainthemegray);
-    font-weight: 900;
     margin: auto;
-    display: inline-block;
-    /* padding: 4px; */
 }
 .logo a {
     display: flex;
@@ -89,8 +78,6 @@ html, body {
 
 .logo > a > img {
     width: 100%;
-    /* height: 22px; */
-    /* padding: 0.2rem; */
     margin: auto 0;
 }
 .navbar__item {
@@ -127,11 +114,6 @@ html, body {
     transform: scale(1);
     transition-duration: 0.3s;
 }
-/* .navbar__links:hover {
-    text-shadow: 0px 0px 3px #695c5c;
-    font-weight: 800;
-    transform: scale(1.1);
-} */
 .navbar__links {
     position: relative;
     width: fit-content;
@@ -158,7 +140,6 @@ html, body {
 
 /* MAIN */
 .container {
-    max-width: 100vw;
     height: 100vh;
     min-height: 700px;
 }
@@ -171,10 +152,7 @@ html, body {
     font-family: 'Bodoni Moda', serif;
     letter-spacing: -0.2rem;
     font-weight: 900;
-    /* font-size: 62px; */
     font-size: 3.875rem;
-    /* font-size: calc(36px + 1.5vw); */
-    /* font-size: 4vw; */
     color: var(--mainthemegray);
     animation: shadowmoves 12s infinite;
 }
@@ -201,48 +179,25 @@ html, body {
 
 }
 
-#design {
-    position: relative;
-    z-index: 3;
-}
-/* .shadow1 {
-    position: absolute;
-    top: 2px;
-    left: 50px;
-    font-family: 'Playfair Display';
-    font-weight: 900;
-    font-size: 62px;
-    color: #e0dddd;
-    transform: scale(0.5);
-    transform: skewX(-70deg);
-    z-index: 2;
-} */
-
 .contents {
     margin-top: auto;
     margin-bottom: auto;
-    /* margin-left: 60px; */
     margin-left: 4.1666vw;
     width: 420px;
     height: fit-content;
-    /* width: 33vw; */
-    /* min-width: 200px; */
     z-index: 2;
 }
 .contents p {
     margin-top: 30px;
-    /* width: 35rem; */
     width: 560px;
     color: #3e3d3e;
     font-size: 1.125rem;
-    /* font-size: 18px; */
     font-weight: 100;
     z-index: 3;
 }
 #la {
     font-style: italic;
     font-size: 1.25rem;
-    /* font-size: 20px; */
     font-weight: 100;
     text-shadow: 4px 4px 2px #7e7c7c;
 }
