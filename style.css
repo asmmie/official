@@ -85,16 +85,14 @@ html, body {
     display: flex;
     text-align: center;
     align-items: center;
+    height: 80px;
+    margin-left: 8px;
 }
 .navbar__menu {
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
-}
-.navbar__item {
-    height: 80px;
-    margin-left: 8px;
 }
 .navbar__links::after {
     position: absolute;
