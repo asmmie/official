@@ -124,7 +124,7 @@
     font-size: calc(36px + 2.499vw);
     }
     .contents {
-    margin-top: cal(61px + 12vh);
+    margin-top: calc(61px + 12vh);
     width: 65.1vw;
     padding-top: unset;
     }
