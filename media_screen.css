@@ -148,9 +148,10 @@
     top: -70px;
     right: -30px;
     }
-    #learnmore-btn {
+    .arrowdown {
         display: none;
     }
+    
     @keyframes shadowmoves {
     0% {
         text-shadow: 0px 0px var(--txtshadow);
