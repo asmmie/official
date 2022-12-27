@@ -121,24 +121,20 @@
     flex-direction: column;
     }
     .head-content {
-    /* font-size: 72px; */
-    font-size: 9.35vw;
     font-size: calc(36px + 2.499vw);
     }
     .contents {
-    /* margin-left: 32px; */
     margin-top: cal(61px + 12vh);
     width: 65.1vw;
+    padding-top: unset;
     }
     .contents p {
     width: 80vw;
-    /* font-size: 2.233vw; */
     }
     /* br {
         display: none;
     } */
     #la {
-        /* margin-left: 10px; */
         font-size: 1.1rem;
     }
     .img-container {
