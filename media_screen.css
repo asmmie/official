@@ -148,7 +148,7 @@
     top: -70px;
     right: -30px;
     }
-    .arrowdown {
+    .arrowdown__div {
         display: none;
     }
     
@@ -203,11 +203,7 @@
     br {
         display: none;
     } 
-    #learnmore-btn {
-        /* margin: 36px auto 20px auto;
-        width: 100%; */
-        display: none;
-    }
+   
     .img-container {
     height: 360px;
     max-width: 670px;
