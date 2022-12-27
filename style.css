@@ -191,6 +191,7 @@ html, body {
     width: 560px;
     color: #3e3d3e;
     font-size: 1.125rem;
+    line-height: 1.75rem;
     font-weight: 100;
     z-index: 3;
 }
