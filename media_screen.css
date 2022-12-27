@@ -131,12 +131,6 @@
     .contents p {
     width: 80vw;
     }
-    /* br {
-        display: none;
-    } */
-    #la {
-        font-size: 1.1rem;
-    }
     .img-container {
     height: 480px;
     max-width: 900px;
