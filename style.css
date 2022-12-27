@@ -181,6 +181,7 @@ html, body {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 4.1666vw;
+    padding-top: 74px;
     width: 420px;
     height: fit-content;
     z-index: 2;
@@ -199,25 +200,34 @@ html, body {
     font-weight: 100;
     text-shadow: 4px 4px 2px #7e7c7c;
 }
-#learnmore-btn {
-    text-decoration: none;
-    display: block;
-    padding: 12px 12px;
-    width: 140px;
-    margin-top: 36px;
-    text-align: center;
-    cursor: pointer;
-    color: #fff;
-    background-color: var(--accentgreen);
-    border-style: none;
-    border-radius: 4px;
-    box-shadow: 0px 3px 3px var(--btnshadow);
-    position: relative;
-    transform: translateY(-2px);
+.arrowdown__link {
+    height: 100%;
+    width: 100%;
 }
-#learnmore-btn:active {
-    transform: translateY(2px);
-    box-shadow: none;
+.arrowdown__div {
+    margin: 2vw auto auto auto;
+    width: 4rem;
+    height: 8rem;
+}
+.arrowdown {
+    display: block;
+    height: 6rem;
+    margin: auto;
+    animation: arrowmotion 2s infinite;
+}
+
+@keyframes arrowmotion {
+    from {
+        transform: translateY(0px);
+    } to {
+        transform: translateY(25px);
+    } 0% {
+        transform: translateY(0px);
+    } 50% {
+        transform: translateY(25px);
+    } 100% {
+        transform: translateY(0px);
+    }
 }
 .img-container {
     margin-top: 74px;
@@ -274,13 +284,8 @@ html, body {
     left: 0;
     font-weight: 600;
     font-size: 50px;
-    /* font-size: 7.215vh; */
     color: var(--mainthemegray);
     width: 0;
-    /* transition: text-shadow 0.5s ease;
-    text-shadow: 14px 12px #e2e2e2; */
-    /* transform: translate(0%, -50%); */
-    /* border-right: 4px solid black; */
     border-right: 0.277vw solid black;
     white-space: nowrap;
     overflow: hidden;
@@ -288,10 +293,8 @@ html, body {
 #greetbox {
     position: relative;
     width: 480px;
-    /* width: 33.333vw; */
     margin: 0 auto;
     display: block;
-    /* height: 9.379vh; */
     height: 65px;
 }
 .animation {
