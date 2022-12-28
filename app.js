@@ -139,23 +139,38 @@ window.addEventListener("resize", highlightMenu);
 
 
 // MAIN ANIMATION
+const stackImg = document.querySelector(".img-stack");
 
-const heroImgs = document.querySelectorAll('.imgs');
-[...heroImgs].forEach((heroImg) => {
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     let scrollPos = window.pageYOffset;
-  if (scrollPos > 1000) {
-    heroImg.classList.remove('img-trans');
-  } else {
-    heroImg.classList.add('img-trans');
-  }
+    if (scrollPos > 1000) {
+      stackImg.classList.remove("img-trans-stack");
+    } else {
+      stackImg.classList.add("img-trans-stack");
+    }
   });
   window.addEventListener("load", () => {
     setTimeout(() => {
-      heroImg.classList.add("img-trans");
+      stackImg.classList.add("img-trans-stack");
     }, 1000);
   });
-});
+
+
+  const mainImgs = document.querySelector(".main-img");
+
+  window.addEventListener("scroll", () => {
+    let scrollPos = window.pageYOffset;
+    if (scrollPos > 1000) {
+      mainImgs.classList.remove("img-trans-main");
+    } else {
+      mainImgs.classList.add("img-trans-main");
+    }
+  });
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      mainImgs.classList.add("img-trans-main");
+    }, 1000);
+  });
 
 
 
