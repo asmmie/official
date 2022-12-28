@@ -255,13 +255,16 @@ html, body {
     left: 90px;
     right: -50px;
     min-width: 750px;
-    transform: rotate(-3deg);
 }
 
-.img-trans {
+.img-trans-main {
     transition: transform 3s ease-out;
-    transform:translateX(-30px);
-    transform-origin: right;
+    transform:translateX(-30px) rotate(12deg);
+}
+
+.img-trans-stack {
+    transition: transform 3s ease-out;
+    transform:translateX(-30px) rotate(-3deg);
 }
 
 
@@ -609,12 +612,12 @@ html, body {
     margin-bottom: 12px;
 }
 
-.pj-dscrptn a {
+.pj-btn a {
     text-decoration: none;
     margin-right: 12px;
     transition: all 0.3s ease;
 }
-.pj-dscrptn a:hover {
+.pj-btn a:hover {
     text-shadow: 0 0 2px var(--mainthemegray);
     font-weight: 500;
     transform: scale(1.5);
