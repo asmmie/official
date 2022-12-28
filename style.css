@@ -238,7 +238,6 @@ html, body {
 
 .main-img {
     min-width: 750px;
-    transform: rotate(12deg);
     position: absolute;
     top: 60px;
     left: 90px;
