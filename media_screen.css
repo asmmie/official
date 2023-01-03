@@ -556,6 +556,12 @@
     }
 }
 
+@media screen and (max-width: 670px) {
+    .contact__container {
+        margin: 12.987vh auto;
+    }
+}
+
 /* FOOTER */
 @media screen and (max-width: 960px) {
     .social i {
