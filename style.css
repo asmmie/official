@@ -684,12 +684,12 @@ html, body {
 .pj-anime-active {
     opacity: 1;
     transform: none;
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
 }
 .pj-anime-active-delay {
     opacity: 1;
     transform: none;
-    transition-delay: 1s;
+    transition-delay: 0.6s;
 }
 
 .prj-contents {
