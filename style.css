@@ -523,7 +523,7 @@ html, body {
 
 .eh-inner-frame:hover {
     background-image: url('./images/eh-2.png');
-    transition: all 0.1s ease-out;
+    transition: background-image 0.1s ease-out;
     transition-delay: 1s;
 }
 
@@ -533,13 +533,13 @@ html, body {
 
 .quote-inner-frame:hover {
     background-image: url('./images/quote-2.png');
-    transition: all 0.1s ease-out;
+    transition: background-image 0.1s ease-out;
     transition-delay: 1s;
 }
 
 .amazon-inner-frame {
     background-image: url('./images/mockup_desktop_blank.png');
-    transition: all 0.1s ease-out;
+    transition: background-image 0.1s ease-out;
     position: relative;
     z-index: 1;
 }
@@ -564,7 +564,7 @@ html, body {
 }
 .tja-inner-frame:hover {
     background-image: url('./images/tja-2.png');
-    transition: all 0.1s ease-out;
+    transition: background-image 0.1s ease-out;
     transition-delay: 1s;
 }
 
@@ -679,7 +679,7 @@ html, body {
 .prj-animation-delay {
     opacity: 0;
     transform: translateY(10px);
-    transition: all 2s ease;
+    transition: transform 2s ease, opacity 2s ease;
 }
 .pj-anime-active {
     opacity: 1;
