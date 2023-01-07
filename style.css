@@ -277,8 +277,6 @@ html, body {
 }
 .aboutwrapper {
     margin: 25.974vh auto;
-
-    /* height: 300px */
 }
 .greet {
     display: block;
@@ -405,7 +403,6 @@ html, body {
     margin: 42px auto;
     text-align: center;
     font-size: 1.875rem;
-    /* font-size: 30px; */
 }
 .slide-container {
     position: relative;
@@ -445,8 +442,6 @@ html, body {
     justify-content: center;
 }
 .service-icon i {
-    /* font-size: 80px; */
-    /* width: 80px; */
     align-items: center;
     color: var(--mainthemegray);
     text-align: center;
@@ -702,6 +697,7 @@ html, body {
 
 .comingsoon {
     text-align: center;
+    font-size: 18px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -888,10 +884,10 @@ html, body {
 .message {
     height: 180px;
 }
-.contact__wrapper h1, p {
+.contact__wrapper h2, p {
     margin-bottom: 18px;
 }
-.contact__wrapper h1 {
+.contact__wrapper h2 {
     font-size: 1.875rem;
 }
 .contact__wrapper p {
