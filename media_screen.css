@@ -107,11 +107,6 @@
     font-size: calc(10px + 0.6935vw);
     text-shadow: .337vw .337vh .16vw #7e7c7c;
     }
-    #learnmore-btn {
-    font-size: 1.1vw;
-    width: 9.8vw;
-    padding: calc(3.6px + 1.212vh) calc(3.6px + 0.583vw);
-    }
 }
 @media screen and (max-width: 960px) {
     .container {
@@ -194,7 +189,7 @@
     #la {
         margin-left: 10px;
     }
-    br {
+    #la-br {
         display: none;
     } 
    
@@ -469,7 +464,7 @@
         max-width: 770px;
     }
     .prj-contents {
-    height: 150px;
+    height: 200px;
     }
 }
 @media screen and (max-width: 670px) {
@@ -498,7 +493,7 @@
         align-items: center;
     }
     .prj-contents {
-    height: 100px;
+    height: 140px;
     }
     .pj-dscrptn a:hover {
     text-shadow: none;
