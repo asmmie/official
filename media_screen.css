@@ -60,6 +60,9 @@
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+    body.fixed {
+    position: fixed;
+  }
     .navbar__links {
         text-align: center;
         font-size: 20px;
