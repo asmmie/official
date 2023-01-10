@@ -11,16 +11,34 @@ window.addEventListener("load", () => {
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".navbar__menu");
 
-
-
-document.addEventListener("click", (evt) =>{
+document.addEventListener("click", (evt) => {
   const menuBars = document.querySelector(".is-active");
   if (menu.contains(evt.target)) {
+    let scrollY;
     menu.classList.toggle("is-active");
     menuLinks.classList.toggle("active");
+    if (!menuBars) {
+      scrollY = window.pageYOffset;
+      document.body.classList.toggle("fixed");
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      scrollY = document.body.style.top;
+      document.body.classList.toggle("fixed");
+      window.scrollTo({
+        top: parseInt(scrollY || "0") * -1,
+        behavior: "instant",
+      });
+    }
   } else if (menuBars) {
+    scrollY = document.body.style.top;
+    console.log(scrollY);
     menu.classList.toggle("is-active");
     menuLinks.classList.toggle("active");
+    document.body.classList.toggle("fixed");
+    window.scrollTo({
+      top: parseInt(scrollY || "0") * -1,
+      behavior: "instant",
+    });
   }
 });
 
