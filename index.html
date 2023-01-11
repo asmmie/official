@@ -190,19 +190,18 @@
       </section>
       <section>
         <div class="projects__container ss-targets" name="projects">
-          <!-- <a class="scroll-control" href=""></a> -->
           <div class="projects__wrapper" id="projects">
             <h2 id="prj-heading">PROJECTS</h2>
             <div class="popup-img">
               <span><i class="fa-solid fa-xmark"></i></span>
               <div class="popup-img-wrapper">
                 <img src="" alt="Laptop Macbook" />
-                <div class="video-div">
+                <div class="popup-video-div">
                   <video src="" autoplay muted playsinline loop></video>
                 </div>
               </div>
             </div>
-            <div class="project-tja">
+            <div class="project-tja project-group">
               <div
                 class="tja-inner-frame inner-frame prj-animation"
                 onclick="getUrl('tja-1', 'tja-2')"
@@ -228,7 +227,46 @@
                 </div>
               </div>
             </div>
-            <div class="project-eh">
+            <div class="project-planet project-group">
+              <div
+                class="video-inner-frame inner-frame prj-animation"
+                onclick="showVideo('planet_hunter_video', 'mockup_desktop_blank', 'planet-2')"
+                onmouseenter="hoverImgDelay('planet-2', this)"
+                onmouseleave="hoverLeaveImg(this)"
+              >
+                <div class="video-div">
+                  <video
+                    class="play-video"
+                    src="./images/planet_hunter_video.mov"
+                    playsinline
+                    muted
+                  ></video>
+                </div>
+              </div>
+
+              <div class="pj-dscrptn amazon-dscrptn prj-animation-delay">
+                <h3 class="pj-name">VR Game Planet Hunters</h3>
+                <h4>#HTML #CSS #JAVASCRIPT</h4>
+                <p>
+                  Coded based on a pre-built Figma design file. The key
+                  technique was to implement parallax scrolling which adds a
+                  sense of depth. Reponsive Accross Devices.
+                </p>
+                <div class="pj-btn">
+                  <a
+                    href="https://asmmie.github.io/Planet-Hunters/"
+                    target="_blank"
+                    >VIEW LIVE</a
+                  >
+                  <a
+                    href="https://github.com/asmmie/Planet-Hunters"
+                    target="_blank"
+                    >VIEW CODE</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="project-eh project-group">
               <div
                 class="eh-inner-frame inner-frame prj-animation"
                 onclick="getUrl('eh-1', 'eh-2')"
@@ -237,8 +275,8 @@
                 <h3 class="pj-name">Website for a Global Beauty Company</h3>
                 <h4>#HTML #CSS #BOOTSTRAP #JAVASCRIPT</h4>
                 <p>
-                  A one-page website with smooth scroll. Responsive across
-                  devices.
+                  A one-page website with smooth scroll, designed and coded by
+                  me. Responsive across devices.
                 </p>
                 <div class="pj-btn">
                   <a href="https://asmmie.github.io/eh-intl/" target="_blank"
@@ -250,14 +288,16 @@
                 </div>
               </div>
             </div>
-            <div class="project-amazon">
+            <div class="project-amazon project-group">
               <div
-                class="amazon-inner-frame inner-frame prj-animation"
+                class="video-inner-frame inner-frame prj-animation"
                 onclick="showVideo('amazon-video-full', 'mockup_desktop_blank', 'amazon_2')"
+                onmouseenter="hoverImgDelay('amazon_2', this)"
+                onmouseleave="hoverLeaveImg(this)"
               >
-                <div class="amazon-video-div">
+                <div class="video-div">
                   <video
-                    class="amazon-video"
+                    class="play-video"
                     src="./images/amazon_git_s.mov"
                     playsinline
                     muted
@@ -283,7 +323,7 @@
               </div>
             </div>
 
-            <div class="project-quote">
+            <div class="project-quote project-group">
               <div
                 class="quote-inner-frame inner-frame prj-animation"
                 onclick="getUrl('quote-1', 'quote-2')"
