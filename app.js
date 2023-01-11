@@ -278,14 +278,14 @@ const showVideo = (video, first, second) => {
   popupImgDiv.style.display = "block";
   popupVideoDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
-  popupVideo.src = `./images/${video}.mov`;
+  popupVideo.src = `./images/${video}`;
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
     if (toggle) {
       popupVideoDiv.style.display = "block";
       popupImg.src = `./images/${first}.png`;
-      popupVideo.src = `./images/${video}.mov`;
+      popupVideo.src = `./images/${video}`;
     } else {
       popupVideoDiv.style.display = "none";
       popupImg.src = `./images/${second}.png`;
