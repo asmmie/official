@@ -242,12 +242,25 @@ const hoverLeaveImg = (e) => {
   video.style.display = "block";
 };
 
-const getUrl = (first, second) => {
+const preventScroll = () => {
   let scrollY = window.pageYOffset;
-  popupImgDiv.style.display = "block";
-  popupImg.src = `./images/${first}.png`;
   document.body.classList.toggle("dt-fixed");
   document.body.style.top = `-${scrollY}px`;
+}
+
+const disableToggle = () => {
+  let scrollY = document.body.style.top;
+  document.body.classList.toggle("dt-fixed");
+  window.scrollTo({
+    top: parseInt(scrollY || "0") * -1,
+    behavior: "instant",
+  });
+}
+
+const getUrl = (first, second) => {
+  preventScroll();
+  popupImgDiv.style.display = "block";
+  popupImg.src = `./images/${first}.png`;
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
@@ -261,13 +274,11 @@ const getUrl = (first, second) => {
 
 
 const showVideo = (video, first, second) => {
-  let scrollY = window.pageYOffset;
+  preventScroll();
   popupImgDiv.style.display = "block";
   popupVideoDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
   popupVideo.src = `./images/${video}.mov`;
-  document.body.classList.toggle("dt-fixed");
-  document.body.style.top = `-${scrollY}px`;
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
@@ -285,14 +296,9 @@ const showVideo = (video, first, second) => {
 
 popupImgDiv.addEventListener("click", (evt) => {
   if (!evt.target.closest(".popup-img-wrapper")) {
-    let scrollY = document.body.style.top;
+    disableToggle();
     popupImgDiv.style.display = "none";
     popupVideoDiv.style.display = "none";
-    document.body.classList.toggle("dt-fixed");
-    window.scrollTo({
-      top: parseInt(scrollY || "0") * -1,
-      behavior: "instant",
-    });
   }
 });
 
