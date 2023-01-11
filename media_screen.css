@@ -445,15 +445,12 @@
 }
 
 @media screen and (max-width: 960px) {
-    .project-eh, .project-quote, .project-amazon, .project-tja {
+    .project-group {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         margin: 32px auto;
-    }
-    .eh-dscrptn, .quote-dscrptn, .amazon-dscrptn, .tja-dscrptn {
-        padding: 0 12px;
     }
     .inner-frame {
         margin: 24px auto;
@@ -461,6 +458,7 @@
     .pj-dscrptn {
         margin: 8px auto;
         min-width: 450px;
+        padding: 0 12px;
     }
     .popup-img-wrapper {
         width: 95%;
