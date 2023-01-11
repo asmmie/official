@@ -219,35 +219,35 @@ window.addEventListener('scroll', () => {
 
 // PROJECT POPUP WINDOWS
 
-const amazonVideoDiv = document.querySelector(".amazon-video-div");
-const amazonDiv= document.querySelector(".amazon-inner-frame");
-const amazonVideo = document.querySelector(".amazon-video");
 const popupImgDiv = document.querySelector(".popup-img");
 const popupImg = document.querySelector(".popup-img-wrapper img");
 const popupImgW = document.querySelector(".popup-img-wrapper");
-const popupVideoDiv = document.querySelector(".video-div");
-const popupVideo = document.querySelector(".video-div video");
+const popupVideoDiv = document.querySelector(".popup-video-div");
+const popupVideo = document.querySelector(".popup-video-div video");
 
 let hoverTimer;
-amazonDiv.onmouseenter = () => {
+const hoverImgDelay = (second, e) => {
+  let video = e.querySelector(".video-div");
   hoverTimer = setTimeout(() => {
-    amazonDiv.style.backgroundImage = "url('./images/amazon_2.png')";
-    amazonDiv.style.transition = "all 0.1s ease-out";
-    amazonVideoDiv.style.display = "none";
+    e.style.backgroundImage = `url('./images/${second}.png')`;
+    e.style.transition = "all 0.1s ease-out";
+    video.style.display = "none";
   }, 1000);
-  
-};
-amazonDiv.onmouseleave = () => {
-  clearTimeout(hoverTimer);
-  amazonDiv.style.backgroundImage = "url('./images/mockup_desktop_blank.png')";
-  amazonVideoDiv.style.display = "block";
 };
 
+const hoverLeaveImg = (e) => {
+  let video = e.querySelector(".video-div");
+  clearTimeout(hoverTimer);
+  e.style.backgroundImage = "url('./images/mockup_desktop_blank.png')";
+  video.style.display = "block";
+};
 
 const getUrl = (first, second) => {
+  let scrollY = window.pageYOffset;
   popupImgDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
-
+  document.body.classList.toggle("dt-fixed");
+  document.body.style.top = `-${scrollY}px`;
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
@@ -261,11 +261,13 @@ const getUrl = (first, second) => {
 
 
 const showVideo = (video, first, second) => {
+  let scrollY = window.pageYOffset;
   popupImgDiv.style.display = "block";
   popupVideoDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
   popupVideo.src = `./images/${video}.mov`;
-
+  document.body.classList.toggle("dt-fixed");
+  document.body.style.top = `-${scrollY}px`;
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
@@ -278,25 +280,34 @@ const showVideo = (video, first, second) => {
       popupImg.src = `./images/${second}.png`;
     }
   };
-}
+};
 
 
 popupImgDiv.addEventListener("click", (evt) => {
   if (!evt.target.closest(".popup-img-wrapper")) {
+    let scrollY = document.body.style.top;
     popupImgDiv.style.display = "none";
     popupVideoDiv.style.display = "none";
+    document.body.classList.toggle("dt-fixed");
+    window.scrollTo({
+      top: parseInt(scrollY || "0") * -1,
+      behavior: "instant",
+    });
   }
 });
 
 window.addEventListener("scroll", () => {
-  let content = document.querySelector(".amazon-video-div");
-  let contentPosition = content.getBoundingClientRect().top;
-  let screenPosition = window.innerHeight;
-  if (contentPosition < screenPosition) {
-    amazonVideo.play();
-  } else {
-    amazonVideo.pause();
-  }
+  let content = document.querySelectorAll(".video-div");
+  content.forEach((cnt) => {
+    let contentPosition = cnt.getBoundingClientRect().top;
+    let pv = cnt.querySelector(".play-video");
+    let screenPosition = window.innerHeight;
+    if (contentPosition < screenPosition) {
+      pv.play();
+    } else {
+      pv.pause();
+    }
+  });
 });
 
 
