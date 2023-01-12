@@ -546,10 +546,10 @@ body.dt-fixed {
 
 .video-div {
     position: absolute;
-    top: 11.7%;
-    left: 16%;
-    right: 16%;
-    bottom: 13.6%;
+    top: 11.6%;
+    left: 15.9%;
+    right: 15.9%;
+    bottom: 13.4%;
 }
 
 .play-video, .popup-video-div video {
@@ -667,10 +667,10 @@ body.dt-fixed {
 .popup-video-div {
     display: none;
     position: absolute;
-    top: 11.7%;
-    left: 16%;
-    right: 16%;
-    bottom: 13.6%;
+    top: 11.6%;
+    left: 15.9%;
+    right: 15.9%;
+    bottom: 13.4%;
 }
 
 .prj-animation {
