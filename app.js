@@ -272,23 +272,21 @@ const getUrl = (first, second) => {
   };
 };
 
-
-const showVideo = (video, first, second) => {
+const showVideo = () => {
   preventScroll();
   popupImgDiv.style.display = "block";
   popupVideoDiv.style.display = "block";
-  popupImg.src = `./images/${first}.png`;
-  popupVideo.src = `./images/${video}`;
+  popupImg.src = "./images/mockup_desktop_blank.png";
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
     if (toggle) {
       popupVideoDiv.style.display = "block";
-      popupImg.src = `./images/${first}.png`;
-      popupVideo.src = `./images/${video}`;
+      popupImg.src = "./images/mockup_desktop_blank.png";
+      popupVideo.src = "./images/amazon-video-full.mov";
     } else {
       popupVideoDiv.style.display = "none";
-      popupImg.src = `./images/${second}.png`;
+      popupImg.src = "./images/amazon_2.png";
     }
   };
 };
