@@ -259,8 +259,8 @@ const disableToggle = () => {
 
 const getUrl = (first, second) => {
   preventScroll();
-  popupImgDiv.style.display = "block";
   popupImg.src = `./images/${first}.png`;
+  popupImgDiv.style.display = "block";
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
@@ -272,21 +272,21 @@ const getUrl = (first, second) => {
   };
 };
 
-const showVideo = () => {
+const showVideo = (video, second) => {
   preventScroll();
+  popupVideo.src = `./images/${video}.mov`;
+  popupImg.src = "./images/mockup_desktop_blank.png";
   popupImgDiv.style.display = "block";
   popupVideoDiv.style.display = "block";
-  popupImg.src = "./images/mockup_desktop_blank.png";
   let toggle = true;
   popupImgW.onclick = () => {
     toggle = !toggle;
     if (toggle) {
-      popupVideoDiv.style.display = "block";
       popupImg.src = "./images/mockup_desktop_blank.png";
-//       popupVideo.src = "./images/amazon-video-full.mov";
+      popupVideoDiv.style.display = "block";
     } else {
+      popupImg.src = `./images/${second}.png`;
       popupVideoDiv.style.display = "none";
-      popupImg.src = "./images/amazon_2.png";
     }
   };
 };
