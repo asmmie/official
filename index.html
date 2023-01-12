@@ -195,9 +195,20 @@
             <div class="popup-img">
               <span><i class="fa-solid fa-xmark"></i></span>
               <div class="popup-img-wrapper">
-                <img src="" alt="Laptop Macbook" />
+                <img
+                  src="./images/mockup_desktop_blank.png"
+                  alt="Laptop Macbook"
+                />
                 <div class="popup-video-div">
-                  <video src="" autoplay muted playsinline loop width="500" height="300"></video>
+                  <video
+                    src="./images/amazon-video-full.mov"
+                    autoplay
+                    muted
+                    playsinline
+                    loop
+                    height="300"
+                    width="500"
+                  ></video>
                 </div>
               </div>
             </div>
@@ -230,23 +241,23 @@
             <div class="project-planet project-group">
               <div
                 class="video-inner-frame inner-frame prj-animation"
-                onclick="showVideo('planet_hunter_video.mp4', 'mockup_desktop_blank', 'planet-2')"
+                onclick="getUrl('planet-1','planet-2')"
                 onmouseenter="hoverImgDelay('planet-2', this)"
                 onmouseleave="hoverLeaveImg(this)"
               >
                 <div class="video-div">
                   <video
                     class="play-video"
-                    src="./images/planet_hunter_video.mp4"
+                    src="./images/planet_hunter_video.mov"
                     playsinline
                     muted
-                    width="250"
                     height="150"
+                    width="250"
                   ></video>
                 </div>
               </div>
 
-              <div class="pj-dscrptn amazon-dscrptn prj-animation-delay">
+              <div class="pj-dscrptn planet-dscrptn prj-animation-delay">
                 <h3 class="pj-name">VR Game Planet Hunters</h3>
                 <h4>#HTML #CSS #JAVASCRIPT</h4>
                 <p>
@@ -293,7 +304,7 @@
             <div class="project-amazon project-group">
               <div
                 class="video-inner-frame inner-frame prj-animation"
-                onclick="showVideo('amazon-video-full.mov', 'mockup_desktop_blank', 'amazon_2')"
+                onclick="showVideo()"
                 onmouseenter="hoverImgDelay('amazon_2', this)"
                 onmouseleave="hoverLeaveImg(this)"
               >
@@ -303,8 +314,8 @@
                     src="./images/amazon_git_s.mov"
                     playsinline
                     muted
-                    width="250"
                     height="150"
+                    width="250"
                   ></video>
                 </div>
               </div>
