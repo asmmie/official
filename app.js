@@ -283,7 +283,7 @@ const showVideo = () => {
     if (toggle) {
       popupVideoDiv.style.display = "block";
       popupImg.src = "./images/mockup_desktop_blank.png";
-      popupVideo.src = "./images/amazon-video-full.mov";
+//       popupVideo.src = "./images/amazon-video-full.mov";
     } else {
       popupVideoDiv.style.display = "none";
       popupImg.src = "./images/amazon_2.png";
