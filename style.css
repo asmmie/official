@@ -14,6 +14,8 @@ html, body {
 }
 body.dt-fixed {
   position: fixed;
+  left: 0;
+  right: 0;
 }
 .landing-animation {
     opacity: 0;
